@@ -1,0 +1,15 @@
+/* ===========================================
+   ------ SPIRIT & BONE - MAIN STYLES ------
+   =========================================== */
+
+/* Import base styles and variables */
+@import '/Pl4y-Studio/SB-base.css';
+
+/* Import component styles */
+@import '/Pl4y-Studio/SB-navigation.css';
+
+/* Import section-specific styles */
+@import '/Pl4y-Studio/SB-home.css';
+@import '/Pl4y-Studio/SB-project.css';
+@import '/Pl4y-Studio/SB-team.css';
+@import '/Pl4y-Studio/SB-contact.css';

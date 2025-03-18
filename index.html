@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Pl4y Studio - Film Production</title>
+    <link rel="stylesheet" href="/Pl4y-Studio/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Add preconnect for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <!-- Add theme color for mobile browsers -->
+    <meta name="theme-color" content="#222222" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="/Pl4y-Studio/images/logo.png" alt="Pl4y Studio Logo" />
+          <div class="logo-paint"></div>
+          <span class="logo-text">Pl4y Studio</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Get in Touch</a></li>
+          <!-- Add close button for mobile menu -->
+          <li class="close-menu-btn">
+            <div class="close-icon">
+              <span></span>
+              <span></span>
+            </div>
+          </li>
+        </ul>
+        <div class="mobile-menu" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M3 12h18M3 6h18M3 18h18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-accent accent-1"></div>
+        <div class="hero-accent accent-2"></div>
+        <div class="hero-accent accent-3"></div>
+
+        <div class="hero-grid">
+          <div class="hero-content">
+            <h1>Creative Storytelling</h1>
+            <p>
+              We bring imagination to life through compelling visual narratives
+              and innovative filmmaking.
+            </p>
+            <a href="#projects" class="btn">View Our Work</a>
+          </div>
+
+          <div class="hero-image">
+            <img src="/api/placeholder/1600/900" alt="Film Production" />
+          </div>
+        </div>
+
+        <div class="hero-scroll">
+          <span>Scroll Down</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </section>
+
+      <section id="projects" class="projects section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Our Projects</h2>
+            <p>
+              Explore our collection of creative works that showcase our expertise
+              in visual storytelling.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <div class="project-card">
+              <div class="project-img">
+                <img
+                  src="/Pl4y-Studio/images/producers.jpeg"
+                  alt="The Producers"
+                />
+                <div class="project-overlay">
+                  <div class="project-tags">
+                    <span class="project-tag">Web Series</span>
+                    <span class="project-tag">Comedy</span>
+                  </div>
+                  <div class="project-info">
+                    <h3>The Producers</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                      Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                      natoque penatibus et magnis dis parturient montes.
+                    </p>
+                    <a href="#" class="project-link">View Project</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-img">
+                <img src="/Pl4y-Studio/images/sb.png" alt="Spirit&Bone" />
+                <div class="project-overlay">
+                  <div class="project-tags">
+                    <span class="project-tag">Short Film</span>
+                    <span class="project-tag">Martial Arts</span>
+                  </div>
+                  <div class="project-info">
+                    <h3>Spirit&Bone</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                      Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                      natoque penatibus et magnis dis parturient montes.
+                    </p>
+                    <a href="SB-index.html" target="_blank" class="project-link"
+                      >View Project</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-container">
+            <div class="contact-info">
+              <div class="contact-section-title">
+                <h2>Get in Touch</h2>
+              </div>
+              <p>
+                Whether you have a project in mind or just want to explore
+                possibilities, we're excited to hear from you. Our team of
+                creative filmmakers is ready to bring your vision to life.
+              </p>
+              <p>
+                Based in the heart of the creative district, Pl4y Studio combines
+                technical expertise with artistic vision to deliver exceptional
+                film experiences.
+              </p>
+              <div class="social-links">
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" required autocomplete="email" />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="footer-logo">Pl4y Studio</div>
+          <p>
+            Creating unforgettable visual experiences that captivate audiences
+            and tell compelling stories.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Film Production</a></li>
+            <li><a href="#">Cinematography</a></li>
+            <li><a href="#">Post Production</a></li>
+            <li><a href="#">Visual Effects</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <p>123 Creative Avenue<br />Film District, CA 90210</p>
+          <p>Email: hello@pl4ystudio.com<br />Phone: (123) 456-7890</p>
+        </div>
+      </div>
+      <div class="copyright">&copy; 2025 Pl4y Studio. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Add a modal backdrop for mobile menu -->
+    <div class="menu-backdrop"></div>
+
+    <script src="/Pl4y-Studio/main.js"></script>
+  </body>
+</html>

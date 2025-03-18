@@ -1,0 +1,288 @@
+/* ===========================================
+   ------ SPIRIT & BONE - TEAM SECTION ------
+   =========================================== */
+
+.team-body {
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.team-main {
+  min-height: calc(100vh - 90px);
+  padding: 40px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.team-container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.team-member {
+  position: absolute;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+}
+
+.section:hover .team-member {
+  transform: translateY(0) scale(1);
+}
+.team-container:hover .team-member:not(:hover) {
+  opacity: 1;
+}
+
+.member-image-container {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  z-index: 1;
+  animation: float 7s ease-in-out infinite;
+  transition: all var(--transition-medium);
+}
+
+.member-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--main-red);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: var(--shadow-md);
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.member-image img {
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.member-info {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-medium);
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(5px);
+}
+
+.member-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--main-red);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.member-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.member-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Team member positioning */
+#member1 {
+  top: 15%;
+  left: 23%;
+}
+#member2 {
+  top: 10%;
+  left: 45%;
+}
+#member3 {
+  top: 15%;
+  left: 67%;
+}
+#member4 {
+  top: 40%;
+  left: 5%;
+}
+#member5 {
+  top: 40%;
+  left: 35%;
+}
+#member6 {
+  top: 40%;
+  left: 55%;
+}
+#member7 {
+  top: 40%;
+  left: 83%;
+}
+#member8 {
+  top: 65%;
+  left: 20%;
+}
+#member9 {
+  top: 65%;
+  left: 70%;
+}
+
+/* Animation delays */
+#member1 .member-image-container {
+  animation-delay: 0s;
+}
+#member2 .member-image-container {
+  animation-delay: -0.5s;
+}
+#member3 .member-image-container {
+  animation-delay: -1s;
+}
+#member4 .member-image-container {
+  animation-delay: -1.5s;
+}
+#member5 .member-image-container {
+  animation-delay: -2s;
+}
+#member6 .member-image-container {
+  animation-delay: -2.5s;
+}
+#member7 .member-image-container {
+  animation-delay: -3s;
+}
+#member8 .member-image-container {
+  animation-delay: -3.5s;
+}
+#member9 .member-image-container {
+  animation-delay: -4s;
+}
+
+/* Team member hover effects */
+.team-member:hover .member-image-container {
+  animation-play-state: paused;
+  transform: scale(1.1);
+  z-index: 10;
+}
+.team-member:hover .member-image {
+  filter: blur(5px) brightness(0.5);
+  transform: scale(1.12);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-member:hover .member-info {
+  opacity: 1;
+  visibility: visible;
+  z-index: 11;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.05);
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.team-member:hover .member-info h3 {
+  color: var(--main-red);
+  margin-bottom: 10px;
+}
+.team-member:hover .member-info h4 {
+  color: white;
+  margin-bottom: 10px;
+}
+.team-member:hover .member-info p {
+  color: #cccccc;
+}
+
+/* Team section animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* Team Section Media Queries */
+@media (max-width: 768px) {
+  /* Team layout adjustments */
+  .team-main {
+    padding-bottom: 100px;
+  }
+  .team-container {
+    min-height: calc(100vh - 90px);
+  }
+
+  /* Reposition team members for smaller screens */
+  #member1 {
+    top: 5%;
+    left: 10%;
+  }
+  #member2 {
+    top: 25%;
+    left: 50%;
+  }
+  #member3 {
+    top: 45%;
+    left: 10%;
+  }
+  #member4 {
+    top: 65%;
+    left: 50%;
+  }
+  #member5 {
+    top: 85%;
+    left: 10%;
+  }
+  #member6 {
+    top: 105%;
+    left: 50%;
+  }
+  #member7 {
+    top: 125%;
+    left: 10%;
+  }
+  #member8 {
+    top: 145%;
+    left: 50%;
+  }
+  #member9 {
+    top: 165%;
+    left: 10%;
+  }
+
+  .member-image-container {
+    width: 140px;
+    height: 120px;
+  }
+}

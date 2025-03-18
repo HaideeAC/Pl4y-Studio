@@ -1,0 +1,73 @@
+/* ===========================================
+   ------ SPIRIT & BONE - PROJECT SECTION ------
+   =========================================== */
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-container {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all var(--transition-slow);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.project-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-container h1 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.project-container h1::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 3px;
+  background-color: var(--main-red);
+  bottom: -10px;
+  left: 0;
+}
+
+.images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: all var(--transition-medium);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.image1,
+.image2 {
+  width: 450px;
+  transition: transform var(--transition-medium);
+}
+
+.image1:hover,
+.image2:hover {
+  transform: scale(1.05);
+}
+
+/* Project Section Media Queries */
+@media (max-width: 1024px) {
+  /* Project adjustments for large tablets */
+}
+
+@media (max-width: 768px) {
+  /* Project adjustments for tablets */
+}
+
+@media (max-width: 480px) {
+  /* Project adjustments for mobile */
+}
