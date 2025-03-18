@@ -1,0 +1,291 @@
+/* ===========================================
+   ------ PL4Y STUDIO - HEADER STYLES ------
+   =========================================== */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: 1.5rem 2rem;
+}
+
+header.scrolled {
+  background-color: rgba(34, 34, 34, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-paint {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent);
+  opacity: 0.3;
+  border-radius: 50%;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 1;
+  filter: blur(10px);
+}
+
+.logo-text {
+  margin-left: 1rem;
+  font-family: var(--font-accent);
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* Menu toggle styles - NEW APPROACH WITH SEPARATE HAMBURGER AND X */
+.nav-toggle {
+  display: block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  z-index: 2000; /* Very high z-index */
+}
+
+/* Hamburger icon styles */
+.hamburger {
+  display: block;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+}
+
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+
+/* X icon styles - completely separate from hamburger */
+.x-icon {
+  display: none; /* Hidden by default */
+  position: fixed;
+  right: 2rem;
+  top: 1.5rem;
+  width: 32px;
+  height: 32px;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.x-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  left: 0;
+  top: 16px;
+}
+
+.x-icon span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.x-icon span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+/* When menu is active, show X and hide hamburger */
+body.menu-open .hamburger {
+  display: none;
+}
+
+body.menu-open .x-icon {
+  display: block;
+}
+
+/* Mobile menu overlay styles */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(34, 34, 34, 0.98);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1003;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.menu-open .nav-overlay {
+  height: 100%;
+}
+
+/* Navigation links (in overlay) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation link underline effect */
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-links a:hover::before,
+.nav-links a:focus::before {
+  width: 100%;
+}
+
+/* Navigation menu styling - applied to all screen sizes */
+.nav-links li {
+  margin: 1.5rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+body.menu-open .nav-links li {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(0.1s * var(--item-order));
+}
+
+.nav-links a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  display: inline-block;
+  color: white;
+}
+
+/* Navigation social icons with instant hover response */
+.nav-social {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  /* Only animate the appearance, not the hover */
+  transition-property: opacity, transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+body.menu-open .nav-social a {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(0.5s + (0.1s * var(--item-order)));
+}
+
+/* Remove transitions for hover state to make it instant */
+.nav-social a:hover {
+  transform: translateY(-5px);
+  background-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+  transition: none;
+}
+
+@media (max-width: 575px) {
+  header {
+    padding: 1rem 1rem;
+  }
+
+  header.scrolled {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+  }
+
+  .nav-social {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .nav-social a {
+    width: 45px;
+    height: 45px;
+  }
+
+  .x-icon {
+    right: 1rem;
+    top: 1rem;
+  }
+}

@@ -1,0 +1,15 @@
+/* ===========================================
+   ------ PL4Y STUDIO - MAIN STYLESHEET ------
+   =========================================== */
+/* Import base styles and variables */
+@import url("AL-base-styles.css");
+
+/* Import component styles */
+@import url("AL-header-styles.css");
+@import url("AL-hero-styles.css");
+@import url("AL-projects-styles.css");
+@import url("AL-contact-styles.css");
+@import url("AL-footer-styles.css");
+
+/* Import animations and utilities */
+@import url("AL-animation-styles.css");

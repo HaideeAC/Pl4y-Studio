@@ -1,0 +1,140 @@
+/* ===========================================
+   ------ PL4Y STUDIO - FOOTER ------
+   =========================================== */
+
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 4rem 1rem 2rem;
+  position: relative;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.footer-column h4::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: var(--accent);
+  bottom: 0;
+  left: 0;
+  border-radius: 3px;
+}
+
+.footer-logo {
+  font-family: "Caveat", cursive;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: var(--accent);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+/* Responsive styles for footer */
+@media (max-width: 991px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .copyright {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-logo {
+    font-size: 1.8rem;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-logo {
+    font-size: 1.6rem;
+  }
+}

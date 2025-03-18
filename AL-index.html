@@ -2,9 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Pl4y Studio - Film Production</title>
-    <link rel="stylesheet" href="/Pl4y-Studio/style.css" />
+    <link rel="stylesheet" href="AL-main.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -18,34 +21,47 @@
     <header>
       <nav>
         <div class="logo">
-          <img src="/Pl4y-Studio/images/logo.png" alt="Pl4y Studio Logo" />
+          <img src="images/logo.png" alt="Pl4y Studio Logo" />
           <div class="logo-paint"></div>
           <span class="logo-text">Pl4y Studio</span>
         </div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Get in Touch</a></li>
-          <!-- Add close button for mobile menu -->
-          <li class="close-menu-btn">
-            <div class="close-icon">
-              <span></span>
-              <span></span>
-            </div>
-          </li>
-        </ul>
-        <div class="mobile-menu" aria-label="Toggle menu">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path
-              d="M3 12h18M3 6h18M3 18h18"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-        </div>
+
+        <!-- Hamburger button -->
+        <button class="nav-toggle hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- X button (separate element) -->
+        <button class="nav-toggle x-icon" aria-label="Close menu">
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
+
+    <!-- Full screen navigation overlay -->
+    <div class="nav-overlay">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+      </ul>
+      <div class="nav-social">
+        <a href="#" aria-label="Instagram" style="--item-order: 1"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" aria-label="X" style="--item-order: 2"
+          ><i class="fab fa-x"></i
+        ></a>
+        <a href="#" aria-label="LinkedIn" style="--item-order: 3"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="#" aria-label="Facebook" style="--item-order: 4"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </div>
+    </div>
 
     <main>
       <section id="home" class="hero">
@@ -79,18 +95,15 @@
           <div class="section-title">
             <h2>Our Projects</h2>
             <p>
-              Explore our collection of creative works that showcase our expertise
-              in visual storytelling.
+              Explore our collection of creative works that showcase our
+              expertise in visual storytelling.
             </p>
           </div>
 
           <div class="project-grid">
             <div class="project-card">
               <div class="project-img">
-                <img
-                  src="/Pl4y-Studio/images/producers.jpeg"
-                  alt="The Producers"
-                />
+                <img src="images/producers.jpeg" alt="The Producers" />
                 <div class="project-overlay">
                   <div class="project-tags">
                     <span class="project-tag">Web Series</span>
@@ -111,7 +124,7 @@
 
             <div class="project-card">
               <div class="project-img">
-                <img src="/Pl4y-Studio/images/sb.png" alt="Spirit&Bone" />
+                <img src="images/sb.png" alt="Spirit&Bone" />
                 <div class="project-overlay">
                   <div class="project-tags">
                     <span class="project-tag">Short Film</span>
@@ -148,17 +161,15 @@
                 creative filmmakers is ready to bring your vision to life.
               </p>
               <p>
-                Based in the heart of the creative district, Pl4y Studio combines
-                technical expertise with artistic vision to deliver exceptional
-                film experiences.
+                Based in the heart of the creative district, Pl4y Studio
+                combines technical expertise with artistic vision to deliver
+                exceptional film experiences.
               </p>
               <div class="social-links">
                 <a href="#" aria-label="Instagram"
                   ><i class="fab fa-instagram"></i
                 ></a>
-                <a href="#" aria-label="Twitter"
-                  ><i class="fab fa-twitter"></i
-                ></a>
+                <a href="#" aria-label="X"><i class="fab fa-x"></i></a>
                 <a href="#" aria-label="LinkedIn"
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
@@ -176,7 +187,12 @@
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" id="email" required autocomplete="email" />
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    autocomplete="email"
+                  />
                 </div>
                 <div class="form-group">
                   <label for="subject">Subject</label>
@@ -206,7 +222,7 @@
             <a href="#" aria-label="Facebook"
               ><i class="fab fa-facebook-f"></i
             ></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="X"><i class="fab fa-x"></i></a>
             <a href="#" aria-label="LinkedIn"
               ><i class="fab fa-linkedin-in"></i
             ></a>
@@ -243,9 +259,6 @@
       <div class="copyright">&copy; 2025 Pl4y Studio. All Rights Reserved.</div>
     </footer>
 
-    <!-- Add a modal backdrop for mobile menu -->
-    <div class="menu-backdrop"></div>
-
-    <script src="/Pl4y-Studio/main.js"></script>
+    <script src="AL-main.js"></script>
   </body>
 </html>
